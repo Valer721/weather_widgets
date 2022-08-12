@@ -89,7 +89,7 @@ export default createStore({
     async fetchWeatherByIp(): Promise<any> {
       try {
         return await axios.get("https://api.ipify.org?format=json").then(async (response: {data: {ip: string}}) => {
-          return await axios.get("http://ip-api.com/json/" + response.data.ip).then((response: {data: {city: string}}) => {
+          return await axios.get("https://ipwho.is/" + response.data.ip).then((response: {data: {city: string}}) => {
             return response.data.city;
           }).catch((e: Error) => {
             console.log(e);
