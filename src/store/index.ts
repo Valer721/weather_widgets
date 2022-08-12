@@ -59,7 +59,7 @@ export default createStore({
           break;
       }
       try {
-        await axios.get(url).then((response) => {
+        await axios.get(url).then((response: {data: any}) => {
           widget = {
             id: response.data.id,
             cityName: response.data.name,
@@ -76,7 +76,7 @@ export default createStore({
             viewUnits
           };
           commit("addWidget", widget);
-        }).catch((e) => {
+        }).catch((e: Error) => {
           console.log(e);
         });
       } catch (e) {
@@ -88,13 +88,13 @@ export default createStore({
 
     async fetchWeatherByIp(): Promise<any> {
       try {
-        return await axios.get("https://api.ipify.org?format=json").then(async (response) => {
-          return await axios.get("http://ip-api.com/json/" + response.data.ip).then((response) => {
+        return await axios.get("https://api.ipify.org?format=json").then(async (response: {data: {ip: string}}) => {
+          return await axios.get("http://ip-api.com/json/" + response.data.ip).then((response: {data: {city: string}}) => {
             return response.data.city;
-          }).catch((e) => {
+          }).catch((e: Error) => {
             console.log(e);
           });
-        }).catch((e) => {
+        }).catch((e: Error) => {
           console.log(e);
         });
       } catch (e) {
