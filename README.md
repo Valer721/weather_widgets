@@ -1,24 +1,7 @@
 # weather-widget
 
-## Project setup
-```
-npm install
-```
+### Demo
+[Weather widget page](https://valer721.github.io/weather_widgets/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![widgets](https://user-images.githubusercontent.com/47289914/184429527-b7cd46b0-2452-4bdb-81e7-d12c54d3fc70.png)
