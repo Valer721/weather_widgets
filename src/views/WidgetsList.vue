@@ -1,13 +1,14 @@
 <template>
   <settings-popup :widgets="widgets" v-if="showModal" @create="createWidget" @closeSettings="showModal = false"/>
+  <div class="WidgetsList__title"><h6>Today's weather forecast</h6></div>
   <div class="WidgetsList" v-if="widgets.length > 0">
     <div v-for="widget in widgets" :key="widget.id">
       <weather-widget :widget="widget" @openSettings="openSettings"/>
     </div>
   </div>
-  <div v-else>
-    You don't have widgets...
-    <button @click="openSettings">Add?</button>
+  <div class="WidgetsList__empty" v-else>
+    <div>You don't have weather widgets...</div>
+    <button class="WidgetsList__addButton" @click="openSettings">Add?</button>
   </div>
 </template>
 
@@ -59,5 +60,38 @@ export default {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
+}
+
+.WidgetsList__title {
+  text-align: center;
+  font-size: 90px;
+  color: #ffffff;
+  margin: 0 8px 8px 8px;
+  background: #000000d1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 8px
+}
+
+.WidgetsList__empty {
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 20px;
+  color: #ffffff;
+  background: #000000d1;
+  border-radius: 15px;
+  margin: 16px 8px;
+  padding: 8px;
+}
+
+.WidgetsList__addButton {
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 0;
+  font-size: 15px;
+  margin: 12px 0;
+  width: 270px;
 }
 </style>

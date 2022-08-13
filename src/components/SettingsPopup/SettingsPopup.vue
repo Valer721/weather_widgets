@@ -36,7 +36,9 @@
         </div>
         <form @submit.prevent="createWidget()">
           <div class="settingsPopup__form">
-            <h3>Add new widget</h3>
+            <div class="settingsPopup__title">
+              <h3>Add new widget</h3>
+            </div>
             <input
                 class="settingsPopup__input"
                 type="text"
