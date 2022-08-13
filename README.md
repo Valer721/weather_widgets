@@ -3,5 +3,4 @@
 ### Demo
 [Weather widget page](https://valer721.github.io/weather_widgets/)
 
-
-![widgets](https://user-images.githubusercontent.com/47289914/184429527-b7cd46b0-2452-4bdb-81e7-d12c54d3fc70.png)
+![widgets](https://user-images.githubusercontent.com/47289914/184464525-42a8ea72-defb-4355-b086-226476e9b187.png)
